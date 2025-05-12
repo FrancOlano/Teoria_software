@@ -1,34 +1,26 @@
-name: Deploy to GitHub Pages
+name: Lint JavaScript
 
 on:
   push:
-    branches:
-      - main
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  build-and-deploy:
+  lint:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          path: .  # Adjust if your files are in a folder like 'dist' or 'src'
+          node-version: '20'
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v3
+      - name: Install ESLint
+        run: npm install --save-dev eslint
+
+      - name: Run ESLint
+        run: npx eslint .
