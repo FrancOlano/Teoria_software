@@ -29,9 +29,9 @@ jobs:
         run: |
           npx eslint .
 
-      - name: Upload ESLint report (optional)
+      - name: Upload ESLint report
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: eslint-report
-          path: eslint-report.txt
+          path: eslint-readme.md
