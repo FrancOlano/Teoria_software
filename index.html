@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What is an LLM?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>What is an LLM?</h1>
+    <button id="themeToggle">Toggle Theme</button>
+  </header>
+
+  <main>
+    <section id="explanation">
+      <h2>Basic Explanation</h2>
+      <p>Large Language Models (LLMs) are AI models trained on vast amounts of text data. They understand and generate human-like language based on the input they receive.</p>
+      <p>They are used in various applications across industries. Some popular use cases include:</p>
+      <ul>
+        <li>Chatbots and virtual assistants</li>
+        <li>Code generation</li>
+        <li>Language translation</li>
+        <li>Text summarization</li>
+        <li>Sentiment analysis</li>
+      </ul>
+    </section>
+
+    <section id="comparison">
+      <h2>Model Comparison</h2>
+      <button id="toggleTable">Show/Hide Comparison Table</button>
+      <table id="modelTable">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Developer</th>
+            <th>Strengths</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GPT-4</td>
+            <td>OpenAI</td>
+            <td>Reasoning, coding, multi-modal</td>
+          </tr>
+          <tr>
+            <td>Claude</td>
+            <td>Anthropic</td>
+            <td>Helpful, safe outputs</td>
+          </tr>
+          <tr>
+            <td>Gemini</td>
+            <td>Google DeepMind</td>
+            <td>Strong integration with Google ecosystem</td>
+          </tr>
+          <tr>
+            <td>LLaMA</td>
+            <td>Meta</td>
+            <td>Open source research flexibility</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="platforms">
+      <h2>Try LLMs on These Platforms</h2>
+      <ul>
+        <li><a href="https://openai.com" target="_blank">OpenAI</a></li>
+        <li><a href="https://poe.com" target="_blank">Poe</a></li>
+        <li><a href="https://huggingface.co" target="_blank">Hugging Face</a></li>
+      </ul>
+    </section>
+
+    <section id="ethics">
+      <h2>Ethical Risks</h2>
+      <ul>
+        <li>Misinformation</li>
+        <li>Bias in outputs</li>
+        <li>Privacy and data security</li>
+      </ul>
+    </section>
+
+    <section id="trivia">
+      <h2>Fun Fact</h2>
+      <button onclick="showTrivia()">Click for a fun fact!</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LLM Info Page</p>
+  </footer>
+
+  <script src="apps.js"></script>
+</body>
+</html>

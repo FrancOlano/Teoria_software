@@ -1,0 +1,113 @@
+/* Base styles */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #007acc;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #90caf9;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+header button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+h1, h2 {
+  color: var(--accent-color);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  display: table;
+}
+
+table, th, td {
+  border: 1px solid var(--accent-color);
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #005f99;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 0 0.5rem;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th, td {
+    padding: 0.5rem;
+    text-align: right;
+    border: none;
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  th::before, td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+}
